@@ -204,7 +204,7 @@
 
             $.ajax({
                 type: "POST",
-                url: 'http://cookbookapi.apphb.com/api/BinhLuan',
+                url: 'http://cookbookserver-8.apphb.com/api/BinhLuan',
                 data: JSON.stringify(binhluan),
                 contentType: "application/json; charset=utf-8",
                 dataType: "json",
@@ -225,7 +225,7 @@
 
                     FB.ui({
                         method: 'feed',
-                        link: 'http://cookbookweb.apphb.com/dish/' + mamon,
+                        link: 'http://cookbookserver-8.apphb.com/dish/' + mamon,
                         picture: '@Model.Hinh',
                         caption: '@Model.TenMonAn',
                         description: 'Mạng xã hội Cookbook dành cho mọi người yêu thích món ăn có thể tham gia nấu nướng và chia sẻ đến với mọi người.'
@@ -291,7 +291,7 @@
 
             $.ajax({
                 type: "GET",
-                url: 'http://cookbookapi.apphb.com/api/BinhLuan/GetCommentsByFoodId/' + mamon,
+                url: 'http://cookbookserver-8.apphb.com/api/BinhLuan/GetCommentsByFoodId/' + mamon,
                 dataType: "json",
                 contentType: "application/json; charset=utf-8",
                 success: function (msg) {

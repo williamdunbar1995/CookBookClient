@@ -193,7 +193,7 @@
         if ('@Request.IsAuthenticated.ToString()' == '@Boolean.TrueString') {
             $.ajax({
                 type: "GET",
-                url: "http://cookbookapi.apphb.com/api/Thich/Exists/" + '@HttpContext.Current.User.Identity.Name' + '-' + self.MaMon,
+                url: "http://cookbookserver-8.apphb.com/api/Thich/Exists/" + '@HttpContext.Current.User.Identity.Name' + '-' + self.MaMon,
                 dataType: "json",
                 contentType: "application/json; charset=utf-8",
                 success: function (msg) {
@@ -212,7 +212,7 @@
 
             $.ajax({
                 type: "GET",
-                url: "http://cookbookapi.apphb.com/api/Thich/Add/" + '@HttpContext.Current.User.Identity.Name' + '-' + self.MaMon,
+                url: "http://cookbookserver-8.apphb.com/api/Thich/Add/" + '@HttpContext.Current.User.Identity.Name' + '-' + self.MaMon,
                 dataType: "json",
                 contentType: "application/json; charset=utf-8",
                 success: function (msg) {
@@ -245,7 +245,7 @@
         self.loadPerson = function () {
             $.ajax({
                 type: "GET",
-                url: "http://cookbookapi.apphb.com/api/NguoiDung/Profile/" + Id,
+                url: "http://cookbookserver-8.apphb.com/api/NguoiDung/Profile/" + Id,
                 dataType: "json",
                 contentType: "application/json; charset=utf-8",
                 success: function (msg) {
@@ -261,7 +261,7 @@
         self.loadFoods = function () {
             $.ajax({
                 type: "GET",
-                url: 'http://cookbookapi.apphb.com/api/MonAn/User' + filter + '/' + Id,
+                url: 'http://cookbookserver-8.apphb.com/api/MonAn/User' + filter + '/' + Id,
                 dataType: "json",
                 contentType: "application/json; charset=utf-8",
                 success: function (msg) {
